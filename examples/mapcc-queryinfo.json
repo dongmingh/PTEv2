@@ -1,0 +1,21 @@
+{
+    "chaincodeID": "mapcc",
+    "logLevel": "ERROR",
+    "invokeCheck": "TRUE",
+    "transMode": "Constant",
+    "transType": "QueryInfo",
+    "invokeType": "Move",
+    "targetPeers": "OrgAnchor",
+    "nProcPerOrg": "1",
+    "channelOpt": {
+        "name": "testorgschannel0",
+        "orgName": [
+            "org1"
+        ]
+    },
+    "queryinfoOpt": {
+        "startBlock": 310000,
+        "endBlock": 310020
+    },
+    "ConnProfilePath": "../operator/connection-profile"
+}

@@ -1,0 +1,48 @@
+{
+    "channelID": "",
+    "chaincodeID": "marbles_cc_priv",
+    "chaincodeVer": "v5",
+    "logLevel": "ERROR",
+    "invokeCheck": "TRUE",
+    "transMode": "Constant",
+    "transType": "Invoke",
+    "invokeType": "Move",
+    "targetPeers": "OrgAnchor",
+    "nProcPerOrg": "1",
+    "nRequest": "1000",
+    "runDur": "600",
+    "TLS": "enabled",
+    "channelOpt": {
+        "name": "testorgschannel0",
+        "action":  "create",
+        "orgName": [
+            "org1"
+        ]
+    },
+    "constantOpt": {
+        "constFreq": "0",
+        "devFreq": "0"
+    },
+    "ccOpt": {
+        "keyIdx": [0],
+        "keyPayLoad": [2],
+        "keyStart": "1000",
+        "payLoadMin": "8",
+        "payLoadMax": "8",
+        "transMapKey": ["marble"],
+        "transMapKeyIdx": ["name", "owner", "price"],
+        "transMapKeyType": ["string", "string", "integer"]
+    },
+    "invoke": {
+        "query": {
+            "fcn": "readMarblePrivateDetails",
+            "args": ["marble"]
+        },
+        "move": {
+            "fcn": "initMarble",
+            "transientMap": {"marble": {"name":"marble", "color":"blue","size":35,"owner":"tom","price":99}},
+            "args": []
+        }
+    },
+    "ConnProfilePath": "../operator/connection-profile"
+}

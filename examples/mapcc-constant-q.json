@@ -1,0 +1,48 @@
+{
+    "chaincodeID": "mapcc",
+    "logLevel": "ERROR",
+    "invokeCheck": "TRUE",
+    "transMode": "Constant",
+    "transType": "Invoke",
+    "invokeType": "Query",
+    "queryResult": "FALSE",
+    "targetPeers": "Discovery",
+    "nProcPerOrg": "2",
+    "nRequest": "10",
+    "runDur": "1200",
+    "channelOpt": {
+        "name": "testorgschannel0",
+        "orgName": [
+            "org1"
+        ]
+    },
+    "constantOpt": {
+        "constFreq": "0",
+        "devFreq": "0"
+    },
+    "discoveryOpt": {
+        "localHost": "true"
+    },
+    "timeoutOpt": {
+        "request": "45000",
+        "grpcTimeout": "6000"
+    },
+    "ccOpt": {
+        "keyIdx": [1],
+        "keyPayLoad": [2],
+        "keyStart": "0",
+        "payLoadMin": "8",
+        "payLoadMax": "8"
+    },
+    "invoke": {
+        "query": {
+            "fcn": "invoke",
+            "args": ["get", "a1"]
+        },
+        "move": {
+            "fcn": "invoke",
+            "args": ["getPut", "a1","1"]
+        }
+    },
+    "ConnProfilePath": "../operator/connection-profile"
+}
